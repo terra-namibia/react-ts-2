@@ -1,4 +1,4 @@
-import { Flex, Heading, Link } from "@chakra-ui/layout";
+import { Box, Flex, Heading, Link } from "@chakra-ui/layout";
 import { memo, VFC } from "react";
 
 export const Header: VFC = memo(() => {
@@ -11,11 +11,15 @@ export const Header: VFC = memo(() => {
       justify="space-between"
       padding={{ base: 3, md: 5 }}
     >
-      <Heading as="h1" fontSize={{ base: "md", md: "lg" }}>
-        ユーザー管理アプリ
-      </Heading>
-      <Flex>
-        <Link>ユーザ一覧</Link>
+      <Flex align="center" as="a" mr={8} _hover={{ cursor: "pointer" }}>
+        <Heading as="h1" fontSize={{ base: "md", md: "lg" }}>
+          ユーザー管理アプリ
+        </Heading>
+      </Flex>
+      <Flex align="center" fontSize="sm" flexGrow={2} display={{ base: "none", md: "flex" }}>
+        <Box pr={4}>
+          <Link>ユーザ一覧</Link>
+        </Box>
         <Link>設定</Link>
       </Flex>
     </Flex>
