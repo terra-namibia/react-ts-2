@@ -1,4 +1,4 @@
-import { Flex, Heading } from "@chakra-ui/layout";
+import { Flex, Heading, Link } from "@chakra-ui/layout";
 import { memo, VFC } from "react";
 
 export const Header: VFC = memo(() => {
@@ -14,6 +14,10 @@ export const Header: VFC = memo(() => {
       <Heading as="h1" fontSize={{ base: "md", md: "lg" }}>
         ユーザー管理アプリ
       </Heading>
+      <Flex>
+        <Link>ユーザ一覧</Link>
+        <Link>設定</Link>
+      </Flex>
     </Flex>
   );
 });
