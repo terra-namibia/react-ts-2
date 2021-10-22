@@ -1,3 +1,5 @@
+import { IconButton } from "@chakra-ui/button";
+import { HamburgerIcon } from "@chakra-ui/icons";
 import { Box, Flex, Heading, Link } from "@chakra-ui/layout";
 import { memo, VFC } from "react";
 
@@ -22,6 +24,13 @@ export const Header: VFC = memo(() => {
         </Box>
         <Link>設定</Link>
       </Flex>
+      <IconButton
+        aria-label="メニューボタン"
+        icon={<HamburgerIcon />}
+        size="sm"
+        variant="unstyled"
+        display={{ base: "block", md: "none" }}
+      />
     </Flex>
   );
 });
