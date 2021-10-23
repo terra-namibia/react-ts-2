@@ -28,7 +28,7 @@ export const Header: VFC = memo(() => {
             ユーザー管理アプリ
           </Heading>
         </Flex>
-        <Flex align="center" fontSize="sm" flexGrow={2} display={{ base: "none", md: "flex" }}>
+        <Flex align="center" fontSize="sm" flexGrow={2} display={{ base: "none", md: "flex" }} >
           <Box pr={4}>
             <Link onClick={onClickUserManagement} >ユーザ一覧</Link>
           </Box>
