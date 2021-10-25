@@ -24,7 +24,7 @@ export const useAuth = () => {
       })
       .catch(() => showMessage({title: "ログインできません", status: "error"}))
       .finally(() => setLoading(false));
-  }, [history]);
+  }, [history, showMessage]);
 
   return { login, loading };
 };
