@@ -23,10 +23,13 @@ export const useAuth = () => {
           history.push("/home");
         } else {
           showMessage({title: "ユーザーが見つかりません", status: "error"});
+          setLoading(false);
         }
       })
-      .catch(() => showMessage({title: "ログインできません", status: "error"}))
-      .finally(() => setLoading(false));
+      .catch(() => {
+        showMessage({title: "ログインできません", status: "error"})
+        setLoading(false);
+      })
   }, [history, showMessage, setLoginUser]);
 
   return { login, loading };
