@@ -24,18 +24,14 @@ export const UserManagement: VFC = memo(() => {
   return (
     <>
       {loading ? (
-        <Center h="100vh">
-          <Spinner color="teal.200" />
-        </Center>
+        <Center h="100vh"><Spinner color="teal.200" /></Center>
       ) : (
         <Wrap p={{ base: 4, md: 10 }}>
           {users.map((user) => (
             <WrapItem key={user.id} >
               <UserCard
-                id={user.id}
+                id={user.id} userName={user.username} fullName={user.name}
                 imageUrl="https://images.metmuseum.org/CRDImages/ep/original/LC-EP_1993_132_suppl_CH-003.jpg"
-                userName={user.username}
-                fullName={user.name}
                 onClick={onClickUser}
               />
             </WrapItem>
