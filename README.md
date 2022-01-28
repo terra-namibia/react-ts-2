@@ -1,3 +1,17 @@
+# このアプリの内容
+
+ユーザー管理アプリ
+
+- ログイン画面、axios を使ったログイン機能
+- ユーザ管理画面と Header
+- ユーザ一覧画面
+- ユーザ詳細画面（Admin は編集可能とする）
+- createContext と useContext でグローバル変数の管理
+- atmic design
+- デザインは chakra-ui を使用
+- TypeScript
+- react-router-dom
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
